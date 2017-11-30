@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            category="org.eclipse.pde.ui"
+            class="com.remainsoftware.featureexplorer.FeatureExplorer"
+            icon="icons/bundlegroup.gif"
+            id="com.remainsoftware.featureexplorer.view1"
+            name="Feature Explorer"
+            restorable="true">
+      </view>
+   </extension>
+
+</plugin>

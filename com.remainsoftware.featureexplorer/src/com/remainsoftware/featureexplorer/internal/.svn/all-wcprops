@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/a/eclipselabs.org/featureexplorer/!svn/ver/8/trunk/bundles/com.remainsoftware.featureexplorer/src/com/remainsoftware/featureexplorer/internal
+END
+VersionColumnLabelProvider.java
+K 25
+svn:wc:ra_dav:version-url
+V 174
+/a/eclipselabs.org/featureexplorer/!svn/ver/8/trunk/bundles/com.remainsoftware.featureexplorer/src/com/remainsoftware/featureexplorer/internal/VersionColumnLabelProvider.java
+END
+FeatureFilter.java
+K 25
+svn:wc:ra_dav:version-url
+V 161
+/a/eclipselabs.org/featureexplorer/!svn/ver/8/trunk/bundles/com.remainsoftware.featureexplorer/src/com/remainsoftware/featureexplorer/internal/FeatureFilter.java
+END
+FeatureExplorerContentProvider.java
+K 25
+svn:wc:ra_dav:version-url
+V 178
+/a/eclipselabs.org/featureexplorer/!svn/ver/8/trunk/bundles/com.remainsoftware.featureexplorer/src/com/remainsoftware/featureexplorer/internal/FeatureExplorerContentProvider.java
+END
+ProviderColumnLabelProvider.java
+K 25
+svn:wc:ra_dav:version-url
+V 175
+/a/eclipselabs.org/featureexplorer/!svn/ver/8/trunk/bundles/com.remainsoftware.featureexplorer/src/com/remainsoftware/featureexplorer/internal/ProviderColumnLabelProvider.java
+END
+EmptyBundleGroup.java
+K 25
+svn:wc:ra_dav:version-url
+V 164
+/a/eclipselabs.org/featureexplorer/!svn/ver/8/trunk/bundles/com.remainsoftware.featureexplorer/src/com/remainsoftware/featureexplorer/internal/EmptyBundleGroup.java
+END
+FeatureExplorerAdapterFactory.java
+K 25
+svn:wc:ra_dav:version-url
+V 177
+/a/eclipselabs.org/featureexplorer/!svn/ver/8/trunk/bundles/com.remainsoftware.featureexplorer/src/com/remainsoftware/featureexplorer/internal/FeatureExplorerAdapterFactory.java
+END
+ViewerComparatorExtension.java
+K 25
+svn:wc:ra_dav:version-url
+V 173
+/a/eclipselabs.org/featureexplorer/!svn/ver/8/trunk/bundles/com.remainsoftware.featureexplorer/src/com/remainsoftware/featureexplorer/internal/ViewerComparatorExtension.java
+END
+StateColumnLabelProvider.java
+K 25
+svn:wc:ra_dav:version-url
+V 172
+/a/eclipselabs.org/featureexplorer/!svn/ver/8/trunk/bundles/com.remainsoftware.featureexplorer/src/com/remainsoftware/featureexplorer/internal/StateColumnLabelProvider.java
+END
+NameColumnLabelProvider.java
+K 25
+svn:wc:ra_dav:version-url
+V 171
+/a/eclipselabs.org/featureexplorer/!svn/ver/8/trunk/bundles/com.remainsoftware.featureexplorer/src/com/remainsoftware/featureexplorer/internal/NameColumnLabelProvider.java
+END
+Activator.java
+K 25
+svn:wc:ra_dav:version-url
+V 157
+/a/eclipselabs.org/featureexplorer/!svn/ver/8/trunk/bundles/com.remainsoftware.featureexplorer/src/com/remainsoftware/featureexplorer/internal/Activator.java
+END
+DescriptionColumnLabelProvider.java
+K 25
+svn:wc:ra_dav:version-url
+V 178
+/a/eclipselabs.org/featureexplorer/!svn/ver/8/trunk/bundles/com.remainsoftware.featureexplorer/src/com/remainsoftware/featureexplorer/internal/DescriptionColumnLabelProvider.java
+END
