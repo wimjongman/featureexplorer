@@ -5,10 +5,12 @@ import org.eclipse.swt.graphics.Image;
 import org.osgi.framework.Bundle;
 
 public final class StateColumnLabelProvider extends ColumnLabelProvider {
+	@Override
 	public Image getImage(Object element) {
 		return null;
 	}
 
+	@Override
 	public String getText(Object element) {
 		if (element instanceof Bundle) {
 			switch (((Bundle) element).getState()) {

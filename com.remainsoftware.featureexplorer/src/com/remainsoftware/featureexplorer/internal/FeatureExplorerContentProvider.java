@@ -15,28 +15,16 @@ import org.osgi.framework.Bundle;
 public class FeatureExplorerContentProvider implements ITreeContentProvider {
 	private HashMap<Long, BundleDescription> bundles;
 
-	public void inputChanged(Viewer viewer, Object oldInput, Object newInput) {
-		bundles = new HashMap<Long, BundleDescription>();
-		if (newInput != null)
-			for (BundleDescription bundle : Platform.getPlatformAdmin()
-					.getState(false).getBundles()) {
-				bundles.put(bundle.getBundleId(), bundle);
-			}
-	}
-
+	@Override
 	public void dispose() {
 	}
 
-	public Object[] getElements(Object inputElement) {
-		return Platform.getBundleGroupProviders();
-	}
-
+	@Override
 	public Object[] getChildren(Object parentElement) {
 
 		if (parentElement instanceof IBundleGroupProvider) {
 			ArrayList<IBundleGroup> result = new ArrayList<IBundleGroup>();
-			result.addAll(Arrays.asList(((IBundleGroupProvider) parentElement)
-					.getBundleGroups()));
+			result.addAll(Arrays.asList(((IBundleGroupProvider) parentElement).getBundleGroups()));
 			result.add(new EmptyBundleGroup(bundles));
 			return result.toArray();
 		}
@@ -49,12 +37,11 @@ public class FeatureExplorerContentProvider implements ITreeContentProvider {
 					result.add(Platform.getBundle(bundle.getSymbolicName()));
 				}
 				return result.toArray();
-			}
-
-			else
-				for (Bundle bundle : ((IBundleGroup) parentElement)
-						.getBundles())
+			} else {
+				for (Bundle bundle : ((IBundleGroup) parentElement).getBundles()) {
 					bundles.remove(bundle.getBundleId());
+				}
+			}
 
 			return ((IBundleGroup) parentElement).getBundles();
 		}
@@ -62,11 +49,28 @@ public class FeatureExplorerContentProvider implements ITreeContentProvider {
 		return new Object[] {};
 	}
 
+	@Override
+	public Object[] getElements(Object inputElement) {
+		return Platform.getBundleGroupProviders();
+	}
+
+	@Override
 	public Object getParent(Object element) {
 		return null;
 	}
 
+	@Override
 	public boolean hasChildren(Object element) {
 		return getChildren(element).length > 0;
+	}
+
+	@Override
+	public void inputChanged(Viewer viewer, Object oldInput, Object newInput) {
+		bundles = new HashMap<Long, BundleDescription>();
+		if (newInput != null) {
+			for (BundleDescription bundle : Platform.getPlatformAdmin().getState(false).getBundles()) {
+				bundles.put(bundle.getBundleId(), bundle);
+			}
+		}
 	}
 }

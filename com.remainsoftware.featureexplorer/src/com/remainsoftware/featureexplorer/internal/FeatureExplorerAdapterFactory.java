@@ -9,6 +9,13 @@ public class FeatureExplorerAdapterFactory implements IAdapterFactory {
 
 	private static FeatureExplorerAdapterFactory instance;
 
+	public static IAdapterFactory getInstance() {
+		if (instance == null) {
+			instance = new FeatureExplorerAdapterFactory();
+		}
+		return instance;
+	}
+
 	@Override
 	public Object getAdapter(Object adaptableObject, Class adapterType) {
 		System.out.println(adaptableObject.getClass().getSimpleName());
@@ -18,13 +25,6 @@ public class FeatureExplorerAdapterFactory implements IAdapterFactory {
 
 	@Override
 	public Class[] getAdapterList() {
-		return new Class[] { Bundle.class, IBundleGroup.class,
-				IBundleGroupProvider.class };
-	}
-
-	public static IAdapterFactory getInstance() {
-		if (instance == null)
-			instance = new FeatureExplorerAdapterFactory();
-		return instance;
+		return new Class[] { Bundle.class, IBundleGroup.class, IBundleGroupProvider.class };
 	}
 }

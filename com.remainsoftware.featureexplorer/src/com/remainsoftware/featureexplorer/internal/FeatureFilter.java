@@ -16,14 +16,19 @@ public class FeatureFilter extends ViewerFilter {
 
 	@Override
 	public boolean select(Viewer viewer, Object parentElement, Object element) {
-		if (element instanceof Bundle)
+		if (element instanceof Bundle) {
 			return ((Bundle) element).getSymbolicName().contains(text);
-		if (element instanceof IBundleGroup)
-			for (Bundle bundle : ((IBundleGroup) element).getBundles())
-				if (bundle.getSymbolicName().contains(text))
+		}
+		if (element instanceof IBundleGroup) {
+			for (Bundle bundle : ((IBundleGroup) element).getBundles()) {
+				if (bundle.getSymbolicName().contains(text)) {
 					return true;
-		if (element instanceof IBundleGroupProvider)
+				}
+			}
+		}
+		if (element instanceof IBundleGroupProvider) {
 			return true;
+		}
 		return false;
 	}
 }

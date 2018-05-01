@@ -7,30 +7,36 @@ import org.eclipse.swt.graphics.Image;
 import org.osgi.framework.Bundle;
 
 public final class NameColumnLabelProvider extends ColumnLabelProvider {
+	@Override
 	public Image getImage(Object element) {
-		if (element instanceof IBundleGroupProvider)
-			return Activator.instance.getImageRegistry().get(
-					"/icons/bundlegroupprovider.gif");
-		if (element instanceof IBundleGroup)
-			return Activator.instance.getImageRegistry().get(
-					"/icons/bundlegroup.gif");
-		if (element instanceof Bundle)
-			return Activator.instance.getImageRegistry().get(
-					"/icons/bundle.gif");
+		if (element instanceof IBundleGroupProvider) {
+			return Activator.instance.getImageRegistry().get("/icons/bundlegroupprovider.gif");
+		}
+		if (element instanceof IBundleGroup) {
+			return Activator.instance.getImageRegistry().get("/icons/bundlegroup.gif");
+		}
+		if (element instanceof Bundle) {
+			return Activator.instance.getImageRegistry().get("/icons/bundle.gif");
+		}
 		return null;
 	}
 
+	@Override
 	public String getText(Object element) {
 
-		if (element instanceof IBundleGroupProvider)
+		if (element instanceof IBundleGroupProvider) {
 			return ((IBundleGroupProvider) element).getName();
-		if (element instanceof IBundleGroup)
-			if (element instanceof EmptyBundleGroup)
+		}
+		if (element instanceof IBundleGroup) {
+			if (element instanceof EmptyBundleGroup) {
 				return "Standalone Bundles";
-			else
+			} else {
 				return ((IBundleGroup) element).getIdentifier();
-		if (element instanceof Bundle)
+			}
+		}
+		if (element instanceof Bundle) {
 			return ((Bundle) element).getSymbolicName();
+		}
 
 		return "";
 

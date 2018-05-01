@@ -17,6 +17,20 @@ public class EmptyBundleGroup implements IBundleGroup {
 	}
 
 	@Override
+	public Bundle[] getBundles() {
+		ArrayList<Bundle> result = new ArrayList<Bundle>();
+		for (BundleDescription bundle : bundles.values()) {
+			result.add(Platform.getBundle(bundle.getSymbolicName()));
+		}
+		return result.toArray(new Bundle[0]);
+	}
+
+	@Override
+	public String getDescription() {
+		return "";
+	}
+
+	@Override
 	public String getIdentifier() {
 		return "";
 	}
@@ -27,13 +41,9 @@ public class EmptyBundleGroup implements IBundleGroup {
 	}
 
 	@Override
-	public String getVersion() {
-		return "";
-	}
-
-	@Override
-	public String getDescription() {
-		return "";
+	public String getProperty(String key) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 	@Override
@@ -42,17 +52,7 @@ public class EmptyBundleGroup implements IBundleGroup {
 	}
 
 	@Override
-	public Bundle[] getBundles() {
-		ArrayList<Bundle> result = new ArrayList<Bundle>();
-		for (BundleDescription bundle : bundles.values()) {
-			result.add(Platform.getBundle(bundle.getSymbolicName()));
-		}
-		return result.toArray(new Bundle[0]);
-	}
-
-	@Override
-	public String getProperty(String key) {
-		// TODO Auto-generated method stub
-		return null;
+	public String getVersion() {
+		return "";
 	}
 }
